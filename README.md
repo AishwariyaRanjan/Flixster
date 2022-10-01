@@ -40,6 +40,7 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
+
 I kept getting the "No adapter attached, skipping layout" error. I knew it had something to do with making the 
 JSON reponse into a parsable string using JSONArray in the onSucceed method, however, i was not able to get any 
 logcat strings in neither the onSucceed nor onFailure methods.
