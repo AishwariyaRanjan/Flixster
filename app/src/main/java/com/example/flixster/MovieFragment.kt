@@ -26,7 +26,7 @@ class MovieFragment : Fragment(), OnListFragmentInteractionListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View?{
-        val view = inflater.inflate(R.layout.activity_main, container,false)
+        val view = inflater.inflate(R.layout.movie_item_list, container,false)
         val recyclerView = view.findViewById<View>(R.id.list) as RecyclerView
         val context = view.context
         recyclerView.layoutManager = GridLayoutManager(context, 2)
@@ -63,7 +63,7 @@ class MovieFragment : Fragment(), OnListFragmentInteractionListener {
             ) {
                 Log.d("UGH", "yo")
                 //TODO - Parse JSON into Models
-                val resultsJSON : JSONArray = json.jsonArray.get(2) as JSONArray
+                val resultsJSON : JSONArray = json.jsonObject.getJSONArray("results") as JSONArray
 //                val resultsJSON : JSONArray("result")
                 Log.d("UGH", resultsJSON.toString())
                 val resultsRawJSON : String = resultsJSON.toString()
@@ -72,7 +72,7 @@ class MovieFragment : Fragment(), OnListFragmentInteractionListener {
                 val arrayMovieType = object : TypeToken<List<Movie>>() {}.type
 
 
-                val models : List<Movie> = gson.fromJson(resultsRawJSON,Array<Movie>::class.java).toList()
+                val models : List<Movie> = gson.fromJson(resultsRawJSON,arrayMovieType)
                 recyclerView.adapter = MovieRecyclerViewAdapter(models, this@MovieFragment)
 
                 // Look for this in Logcat:
