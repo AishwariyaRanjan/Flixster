@@ -1,18 +1,18 @@
-# Android Project 3 - Flixster+
+# Android Project 3 - *FlixsterPlus*
 
-Submitted by: Aishwariya
+Submitted by: **Anvita Lingampalli**
 
-Flixster+ is a movie browsing app that allows users to browse movies currently playing in theaters.
+**FlixsterPlus** is a movie browsing app that allows users to browse movies currently playing in theaters.
 
-Time spent: 6 hours spent in total
+Time spent: **6** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **Make a request to [The Movie Database API's `now_playing`](https://developers.themoviedb.org/3/movies/get-now-playing) endpoint to get a list of current movies**
+- [ ] **Make a request to [The Movie Database API's `now_playing`](https://developers.themoviedb.org/3/movies/get-now-playing) endpoint to get a list of current movies**
 - [ ] **Parse through JSON data and implement a RecyclerView to display all movies**
-- [x] **Use Glide to load and display movie poster images**
+- [ ] **Use Glide to load and display movie poster images**
 
 The following **optional** features are implemented:
 
@@ -22,13 +22,15 @@ The following **optional** features are implemented:
 - [ ] Implement Glide to display placeholder graphics during loading
   - Note: this feature is difficult to capture in a GIF without throttling internet speeds.  Instead, include an additional screencap of your Glide code implementing the feature.  (<10 lines of code)
 
+The following **additional** features are implemented:
+
+- [ ] List anything else that you can get done to improve the app functionality!
 
 ## Video Walkthrough
 
-<!--Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
--->
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
@@ -40,10 +42,6 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
-
-I kept getting the "No adapter attached, skipping layout" error. I knew it had something to do with making the 
-JSON reponse into a parsable string using JSONArray in the onSucceed method, however, i was not able to get any 
-logcat strings in neither the onSucceed nor onFailure methods.
 
 ## License
 
